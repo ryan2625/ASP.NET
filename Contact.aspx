@@ -15,5 +15,7 @@
             <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
             <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
         </address>
+        <asp:Label ID="Label1" runat="server" Text="Name:" CssClass="form-label"></asp:Label>
+        <asp:TextBox runat="server" ID="txtName" CssClass="form-control"></asp:TextBox>
     </main>
 </asp:Content>
