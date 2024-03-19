@@ -44,6 +44,12 @@
                             <div><%# Container.DataItem %></div>
                         </ItemTemplate>
                     </asp:Repeater>
+                <h1>DIV</h1>
+                <asp:Repeater id="AnimalRepeater" runat="server">
+                    <ItemTemplate>
+                       <h1><%# Container.DataItem %></h1>
+                    </ItemTemplate>
+                </asp:Repeater>
             </section>
         </div>
     </main>

@@ -21,6 +21,28 @@ namespace asp_app
 
             Repeater1.DataSource = values;
             Repeater1.DataBind();
+
+            Run_Repeater();
+        }
+
+        public void Run_Repeater()
+        {
+            ArrayList animals = new ArrayList();
+
+            string[] items = {"Ant", "Dog", "Cat"};
+
+            foreach (string item in items)
+            {
+                animals.Add(item);
+            }
+
+            Repeater_Binder(animals, AnimalRepeater);
+        }
+
+        public void Repeater_Binder(ArrayList param1, Repeater repeater1)
+        {
+            repeater1.DataSource = param1;
+            repeater1.DataBind();
         }
     }
 }
