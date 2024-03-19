@@ -50,6 +50,8 @@
                        <h1><%# Container.DataItem %></h1>
                     </ItemTemplate>
                 </asp:Repeater>
+                            <asp:TextBox ID="Text1" runat="server" />
+            <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="Add_Animal" />
             </section>
         </div>
     </main>

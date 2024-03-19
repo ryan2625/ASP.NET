@@ -10,6 +10,9 @@ namespace asp_app
 {
     public partial class _Default : Page
     {
+
+        public ArrayList animals = new ArrayList();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             lbl.Text = "TESTINGG 2";
@@ -22,27 +25,26 @@ namespace asp_app
             Repeater1.DataSource = values;
             Repeater1.DataBind();
 
-            Run_Repeater();
-        }
-
-        public void Run_Repeater()
-        {
-            ArrayList animals = new ArrayList();
-
-            string[] items = {"Ant", "Dog", "Cat"};
+            string[] items = { "Ant", "Dog", "Cat" };
 
             foreach (string item in items)
             {
                 animals.Add(item);
             }
-
             Repeater_Binder(animals, AnimalRepeater);
         }
+
 
         public void Repeater_Binder(ArrayList param1, Repeater repeater1)
         {
             repeater1.DataSource = param1;
             repeater1.DataBind();
+        }
+
+        public void Add_Animal(object sender, EventArgs e)
+        {
+            animals.Add(Text1.Text);
+            Repeater_Binder(animals, AnimalRepeater);
         }
     }
 }
