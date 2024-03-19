@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,15 @@ namespace asp_app
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            lbl.Text = "TESTINGG 2";
+            ArrayList values = new ArrayList();
 
+            values.Add("Tree");
+            values.Add("Bark");
+            values.Add("Wood");
+
+            Repeater1.DataSource = values;
+            Repeater1.DataBind();
         }
     }
 }

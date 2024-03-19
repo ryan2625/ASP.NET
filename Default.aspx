@@ -37,6 +37,13 @@
                 <p>
                     <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
                 </p>
+                   <asp:Label runat="server" id="lbl" ></asp:Label>
+
+                    <asp:Repeater id="Repeater1" runat="server">
+                        <ItemTemplate>
+                            <div><%# Container.DataItem %></div>
+                        </ItemTemplate>
+                    </asp:Repeater>
             </section>
         </div>
     </main>
