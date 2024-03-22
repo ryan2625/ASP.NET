@@ -13,6 +13,7 @@ namespace asp_app
 
         private ArrayList animals;
 
+
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -44,7 +45,13 @@ namespace asp_app
         public void Add_Animal(object sender, EventArgs e)
         {
             animals.Add(Text1.Text);
+            Text1.Text = "";
             Repeater_Binder(animals, AnimalRepeater);
+        }
+
+        public void Check_CheckB(object sender, EventArgs e)
+        {
+            Label1.Visible = false;
         }
     }
 }

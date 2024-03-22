@@ -52,6 +52,8 @@
                 </asp:Repeater>
                             <asp:TextBox ID="Text1" runat="server" />
             <asp:Button ID="btnSubmit" runat="server" Text="Submit" OnClick="Add_Animal" />
+                <asp:CheckBox ID="checl1" runat="server" OnCheckedChanged="Check_CheckB"/>
+                <asp:Label Visible="true" runat="server" ID="Label1" Text="IM HERE: "/>
             </section>
         </div>
     </main>
